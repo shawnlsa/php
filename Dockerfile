@@ -1,7 +1,5 @@
 FROM debian
 
-apt-get install
-
 RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && apt-get install -y nginx \
     && apt-get install -y php5-fpm php5-mysql php5-redis php5-gd php5-mcrypt \
