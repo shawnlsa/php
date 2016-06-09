@@ -1,7 +1,6 @@
 #!/bin/sh
 export LANG=zh_CN
 export LC_MESSAGES=en_US
-ulimit -HSn 65536
 
 shut_down(){
     service nginx stop
