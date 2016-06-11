@@ -13,6 +13,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
 
 RUN mkdir -p /home/entrypoint
 COPY src/entrypoint.sh /home/entrypoint/entrypoint.sh
+COPY src/default /etc/nginx/sites-available/default
 RUN chmod u+x /home/entrypoint/entrypoint.sh
+
+EXPOSE 80
 
 ENTRYPOINT ["/home/entrypoint/entrypoint.sh"]
